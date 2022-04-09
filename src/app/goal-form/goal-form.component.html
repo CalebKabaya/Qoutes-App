@@ -1,6 +1,6 @@
 <div>
     <hr>
-    <form #quoteForm='ngForm'>
+    <form  (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
         <div class="form-group">
   
             <label for="name">Author</label>
@@ -36,4 +36,5 @@
         <button type="submit" class="btn btn-success">Add Quote</button>
 
     </form>
+    
   </div>

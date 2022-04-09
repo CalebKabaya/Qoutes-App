@@ -14,3 +14,8 @@
 /* .btn-item{
     justify-content: space-around;
 } */
+#main{
+    display: flex;
+    justify-content: space-around;
+
+}

@@ -13,6 +13,12 @@ export class QuotesComponent implements OnInit {
     new Quote(2,'Caleb M Kabaya','Facetime before you meet up','James K.',1,0),
     new Quote(3,'Caleb M Kabaya','Take a break from dating when exhausted','Elizabeth Olsen',0,0)
   ]
+  addNewQuote(quote:any){
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength+1;
+    // goal.completeDate = new Date(goal.completeDate)
+    this.quotes.push(quote)
+  }
   arr: number[]=this.quotes.map(quote=>quote.upvotes)
   highest=Math.max(...this.arr)
   constructor() { }
