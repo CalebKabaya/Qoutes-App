@@ -19,3 +19,10 @@
     justify-content: space-around;
 
 }
+#cols{
+    margin: 0 30px;
+}
+.arrange-btn{
+    display: flex;
+    justify-content: space-between;
+}

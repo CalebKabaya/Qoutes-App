@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Quote } from '../quote';
 @Component({
   selector: 'app-quotes',
@@ -18,6 +18,20 @@ export class QuotesComponent implements OnInit {
     quote.id = quoteLength+1;
     // goal.completeDate = new Date(goal.completeDate)
     this.quotes.push(quote)
+  }
+  @Output() isComplete = new EventEmitter<boolean>();
+
+  qouteDelete(complete:boolean){
+    this.isComplete.emit(complete);
+  }
+  deleteQuote(isComplete:any, index:any){
+    if (isComplete) {
+      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
+
+      if (toDelete){
+        this.quotes.splice(index,1)
+      }
+    }
   }
   arr: number[]=this.quotes.map(quote=>quote.upvotes)
   highest=Math.max(...this.arr)
