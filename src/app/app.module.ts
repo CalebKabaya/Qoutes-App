@@ -8,6 +8,7 @@ import { HighlightDirective } from './highlight.directive';
 import { GoalFormComponent } from './goal-form/goal-form.component';
 import { FormsModule } from '@angular/forms';
 import { LikebuttonsComponent } from './likebuttons/likebuttons.component';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { LikebuttonsComponent } from './likebuttons/likebuttons.component';
     QuotesComponent,
     HighlightDirective,
     GoalFormComponent,
-    LikebuttonsComponent
+    LikebuttonsComponent,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,

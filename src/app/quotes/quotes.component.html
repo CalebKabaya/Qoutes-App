@@ -3,7 +3,7 @@
         <h2>Quote of the Day</h2>
         <hr>
         <ul *ngFor='let quote of quotes'>
-            <div *ngIf="quote.upvotes == highest && quote.upvotes>0;then highlighted else nothighlighted">here is ignored</div>
+            <div *ngIf="quote.numberOfUpvotes == highest && quote.numberOfUpvotes>0;then highlighted else nothighlighted">here is ignored</div>
             <ng-template #highlighted>
                 <li appHighlight ><span class="qoutee">{{quote.quote}}</span><br>
                     <span class="item">Author:{{quote.author}}</span><br>
@@ -12,12 +12,13 @@
                     <!-- <span class="item">DownVotes:{{quote.downvotes}}</span><br> -->
                     <div class="arrange-btn">
                         <app-likebuttons></app-likebuttons>
-                        <button type="button" class="btn btn-danger">Delete</button>
+                        <button type="button" class="btn btn-danger" (click)=' deleteQuote(1)'>Delete</button>
+
 
                     </div>
-                    <button type="button" class="btn btn-danger" (click)=' deleteQuote(1)'>Delete</button>
 
-    
+                    <p>This qoute was created on - {{quote.completeDate|date}} <br> {{quote.completeDate|dateCount}} days</p>
+
                 </li>
             </ng-template>
             <ng-template #nothighlighted>
@@ -26,9 +27,10 @@
                     <span class="item">Publisher:{{quote.name}}</span><br>
                     <div class="arrange-btn">
                         <app-likebuttons></app-likebuttons>
-                        <button type="button" class="btn btn-danger">Delete</button>
+                        <button type="button" class="btn btn-danger" (click)=' deleteQuote(1)'>Delete</button>
 
                     </div>
+                    <p>This qoute was created on - {{quote.completeDate|date}}<br>{{quote.completeDate|dateCount}} days</p>
 
                 </li>
             </ng-template>
