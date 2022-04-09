@@ -13,7 +13,7 @@
                     <div class="arrange-btn">
                         <button type="button" class="btn btn-info">UpVote</button><br>
                         <button type="button" class="btn btn-warning">DownVote</button><br>
-                        <button type="button" class="btn btn-danger">Delete</button>
+                        <button type="button" class="btn btn-danger" (click)="deleteQuote(1)">Delete</button>
                     </div>
     
                 </li>
@@ -27,7 +27,7 @@
                     <div class="arrange-btn">
                         <button type="button" class="btn btn-info">UpVote</button><br>
                         <button type="button" class="btn btn-warning">DownVote</button><br>
-                        <button type="button" class="btn btn-danger" (click)= 'qouteDelete(true)' (isComplete) = 'deleteQuote($event,1)'>Delete</button>
+                        <button type="button" class="btn btn-danger"(click)="deleteQuote(1)" >Delete</button>
                     </div>
                 </li>
             </ng-template>

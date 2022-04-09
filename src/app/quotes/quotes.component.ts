@@ -19,19 +19,22 @@ export class QuotesComponent implements OnInit {
     // goal.completeDate = new Date(goal.completeDate)
     this.quotes.push(quote)
   }
-  @Output() isComplete = new EventEmitter<boolean>();
+  // @Output() isComplete = new EventEmitter<boolean>();
 
-  qouteDelete(complete:boolean){
-    this.isComplete.emit(complete);
-  }
-  deleteQuote(isComplete:any, index:any){
-    if (isComplete) {
-      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
+  // qouteDelete(complete:boolean){
+  //   this.isComplete.emit(complete);
+  // }
+  // deleteQuote(isComplete:any, index:any){
+  //   if (isComplete) {
+  //     let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
 
-      if (toDelete){
-        this.quotes.splice(index,1)
-      }
-    }
+  //     if (toDelete){
+  //       this.quotes.splice(index,1)
+  //     }
+  //   }
+  // }
+  deleteQuote(i:any) {
+    this.quotes.splice(i, 1)
   }
   arr: number[]=this.quotes.map(quote=>quote.upvotes)
   highest=Math.max(...this.arr)
