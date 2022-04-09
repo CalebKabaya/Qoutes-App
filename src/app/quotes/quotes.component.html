@@ -8,13 +8,15 @@
                 <li appHighlight ><span class="qoutee">{{quote.quote}}</span><br>
                     <span class="item">Author:{{quote.author}}</span><br>
                     <span class="item">Publisher:{{quote.name}}</span><br>
-                    <span class="item">UpVotes:{{quote.upvotes}}</span><br>
-                    <span class="item">DownVotes:{{quote.downvotes}}</span><br>
+                    <!-- <span class="item">UpVotes:{{numberOfUpvotes}}</span><br> -->
+                    <!-- <span class="item">DownVotes:{{quote.downvotes}}</span><br> -->
                     <div class="arrange-btn">
-                        <button type="button" class="btn btn-info">UpVote</button><br>
-                        <button type="button" class="btn btn-warning">DownVote</button><br>
-                        <button type="button" class="btn btn-danger" (click)="deleteQuote(1)">Delete</button>
+                        <app-likebuttons></app-likebuttons>
+                        <button type="button" class="btn btn-danger">Delete</button>
+
                     </div>
+                    <button type="button" class="btn btn-danger" (click)=' deleteQuote(1)'>Delete</button>
+
     
                 </li>
             </ng-template>
@@ -22,13 +24,12 @@
                 <li><span class="qoutee">{{quote.quote}}</span><br>
                     <span class="item">Author:{{quote.author}}</span><br>
                     <span class="item">Publisher:{{quote.name}}</span><br>
-                    <span class="item">UpVotes:{{quote.upvotes}}</span><br>
-                    <span class="item">DownVotes:{{quote.downvotes}}</span><br>
                     <div class="arrange-btn">
-                        <button type="button" class="btn btn-info">UpVote</button><br>
-                        <button type="button" class="btn btn-warning">DownVote</button><br>
-                        <button type="button" class="btn btn-danger"(click)="deleteQuote(1)" >Delete</button>
+                        <app-likebuttons></app-likebuttons>
+                        <button type="button" class="btn btn-danger">Delete</button>
+
                     </div>
+
                 </li>
             </ng-template>
         

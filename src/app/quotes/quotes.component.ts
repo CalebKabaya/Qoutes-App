@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Quote } from '../quote';
+import { LikebuttonsComponent } from '../likebuttons/likebuttons.component';
 @Component({
   selector: 'app-quotes',
   templateUrl: './quotes.component.html',
@@ -10,7 +11,7 @@ export class QuotesComponent implements OnInit {
 
   quotes:Quote[]=[
     new Quote(1,'Caleb M Kabaya','Whatever you do – give it 100%','Martin L. King',0,0),
-    new Quote(2,'Caleb M Kabaya','Facetime before you meet up','James K.',1,0),
+    new Quote(2,'Caleb M Kabaya','Facetime before you meet up','James K.',0,0),
     new Quote(3,'Caleb M Kabaya','Take a break from dating when exhausted','Elizabeth Olsen',0,0)
   ]
   addNewQuote(quote:any){
@@ -19,6 +20,13 @@ export class QuotesComponent implements OnInit {
     // goal.completeDate = new Date(goal.completeDate)
     this.quotes.push(quote)
   }
+  // upVotes(upvotes:any){
+  //   let upvotesLength = this.quotes.length;
+  //   upvotes.id = upvotesLength++;
+  //   // goal.completeDate = new Date(goal.completeDate)
+  //   this.quotes.push(upvotes)
+  // }
+
   // @Output() isComplete = new EventEmitter<boolean>();
 
   // qouteDelete(complete:boolean){
@@ -36,6 +44,16 @@ export class QuotesComponent implements OnInit {
   deleteQuote(i:any) {
     this.quotes.splice(i, 1)
   }
+  // upvotes:number=0
+  // downvotes:number=0
+
+  // upvotesClick() {
+  //   this.upvotes++;
+  // }
+  // downvotesClick() {
+  //   this.downvotes--;
+  // }
+  
   arr: number[]=this.quotes.map(quote=>quote.upvotes)
   highest=Math.max(...this.arr)
   constructor() { }
@@ -44,3 +62,4 @@ export class QuotesComponent implements OnInit {
   }
 
 }
+
