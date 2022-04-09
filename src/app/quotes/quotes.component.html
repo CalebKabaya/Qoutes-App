@@ -1,9 +1,22 @@
 <ul *ngFor='let quote of quotes'>
-    <li appHighlight><span class="qoutee">{{quote.quote}}</span><br>
-        <span>Author:{{quote.author}}</span><br>
-        <span>Publisher:{{quote.name}}</span><br>
-        <span>UpVotes:{{quote.upvotes}}</span><br>
-        <span>DownVotes:{{quote.downvotes}}</span><br>
-    </li>
+    <div *ngIf="quote.upvotes == 1;then highlighted else nothighlighted">here is ignored</div>
+    <ng-template #highlighted>
+        <li appHighlight ><span class="qoutee">{{quote.quote}}</span><br>
+            <span>Author:{{quote.author}}</span><br>
+            <span>Publisher:{{quote.name}}</span><br>
+            <span>UpVotes:{{quote.upvotes}}</span><br>
+            <span>DownVotes:{{quote.downvotes}}</span><br>
+        </li>
+    </ng-template>
+    <ng-template #nothighlighted>
+        <li><span class="qoutee">{{quote.quote}}</span><br>
+            <span>Author:{{quote.author}}</span><br>
+            <span>Publisher:{{quote.name}}</span><br>
+            <span>UpVotes:{{quote.upvotes}}</span><br>
+            <span>DownVotes:{{quote.downvotes}}</span><br>
+        </li>
+    </ng-template>
+
+  
 
 </ul>
