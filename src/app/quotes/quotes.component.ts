@@ -14,11 +14,12 @@ export class QuotesComponent implements OnInit {
     new Quote(2,'Caleb M Kabaya','Facetime before you meet up','James K.',6,0,new Date(2020,3,14)),
     new Quote(3,'Caleb M Kabaya','Take a break from dating when exhausted','Elizabeth Olsen',0,0,new Date(2020,3,14))
   ]
-  addNewQuote(quote:any){
+  addNewQuote(quotes:any){
     let quoteLength = this.quotes.length;
-    quote.id = quoteLength+1;
+    quotes.id = quoteLength+1;
     // goal.completeDate = new Date(goal.completeDate)
-    this.quotes.push(quote)
+    this.quotes.push(quotes)
+    
   }
   
   deleteQuote(i:any) {
