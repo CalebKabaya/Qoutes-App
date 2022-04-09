@@ -3,3 +3,14 @@
     font-weight: bolder;
 
 }
+.item{
+    padding-top: 60px;
+    line-height: 20px;
+
+}
+.btn{
+    margin-top: 15px;
+}
+/* .btn-item{
+    justify-content: space-around;
+} */
