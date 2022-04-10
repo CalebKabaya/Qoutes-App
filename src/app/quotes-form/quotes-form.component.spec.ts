@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GoalFormComponent } from './goal-form.component';
+import { GoalFormComponent } from './quotes-form.component';
 
 
 describe('GoalFormComponent', () => {

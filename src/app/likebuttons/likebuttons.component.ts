@@ -7,7 +7,7 @@ import { Quote } from '../quote';
   styleUrls: ['./likebuttons.component.css']
 })
 export class LikebuttonsComponent implements OnInit {
-  numberOfUpvotes:number=0
+  numberOfUpvotes:number=8
   upVotesClick(){
     this.numberOfUpvotes ++;
   }

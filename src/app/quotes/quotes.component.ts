@@ -11,8 +11,8 @@ export class QuotesComponent implements OnInit {
 
   quotes:Quote[]=[
     new Quote(1,'Caleb M Kabaya','Whatever you do – give it 100%','Martin L. King',0,0,new Date()),
-    new Quote(2,'Caleb M Kabaya','Facetime before you meet up','James K.',0,0,new Date(2020,3,14)),
-    new Quote(3,'Caleb M Kabaya','Take a break from dating when exhausted','Elizabeth Olsen',9,0,new Date(2020,3,14))
+    new Quote(2,'Caleb M Kabaya','Facetime before you meet up','James K.',9,0,new Date()),
+    new Quote(3,'Caleb M Kabaya','Take a break from dating when exhausted','Elizabeth Olsen',0,0,new Date())
   ]
   addNewQuote(quotes:any){
     let quoteLength = this.quotes.length;
