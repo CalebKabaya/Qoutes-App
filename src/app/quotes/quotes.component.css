@@ -36,9 +36,15 @@
   @media only screen and (max-width: 418px) {
     #cols{
         width: 100%;
+        margin: 0 0;
+
     }
     #main{
         width: 100%;
+    }
+    .arrange-btn{
+        width: 100%;
+        flex-direction: column;
     }
   }
   

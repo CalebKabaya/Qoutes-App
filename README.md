@@ -26,11 +26,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 [Go Back to the top](#portfolio)
 ## Technology Used
-* Angular-To develop single-page applications
+* Angular-To develop the single-page application
 
 * HTML - which was used to build the structure of the pages.
 
-* CSS - which was used to style the pages incuding the left aside navigation bar
+* CSS - which was used to style the pages
 
 * Javascipt- to make the web more interactive
 
