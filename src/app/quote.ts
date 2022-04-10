@@ -6,6 +6,7 @@ export class Quote {
     numberOfUpvotes:number;
     numberOfDownvotes:number;
 
+
     // upvotes:number;
     // downvotes:number;
 
@@ -14,8 +15,10 @@ export class Quote {
         this.name=name;
         this.quote=quote;
         this.author=author;
-        this.numberOfUpvotes=numberOfUpvotes;
-        this.numberOfDownvotes=numberOfDownvotes;
+        this.numberOfUpvotes=0;
+        this.numberOfDownvotes=0;
+        // this.completeDate=new Date;
+
 
     }
 }

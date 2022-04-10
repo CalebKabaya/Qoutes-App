@@ -4,8 +4,7 @@ import { Directive, ElementRef } from '@angular/core';
   selector: '[appHighlight]'
 })
 export class HighlightDirective {
-
-  constructor(private elem:ElementRef) {
+  constructor(elem:ElementRef) {
     elem.nativeElement.style.color ='green'
    }
 
